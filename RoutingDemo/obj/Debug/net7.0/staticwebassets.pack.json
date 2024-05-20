@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\dotnet\\feb\\RoutingDemo\\RoutingDemo\\wwwroot\\Sample.txt",
+      "PackagePath": "staticwebassets\\Sample.txt"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.RoutingDemo.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.RoutingDemo.props",
+      "PackagePath": "build\\RoutingDemo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.RoutingDemo.props",
+      "PackagePath": "buildMultiTargeting\\RoutingDemo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.RoutingDemo.props",
+      "PackagePath": "buildTransitive\\RoutingDemo.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

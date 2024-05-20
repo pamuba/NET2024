@@ -1,0 +1,489 @@
+There are a lot of sources that are producing the data at exponential rate, such as Iot devices, the
+
+logs coming from some server, social networks, etc..
+
+Right.
+
+The very first step for any big data system is to consume this data, and that is called injection stage.
+
+So there are many tools in the market that can be used to ingest the data.
+
+But the most commonly used ones are the Kafka Connect.
+
+So Kafka is a full fledged big data platform that provides many components for different purposes.
+
+And one of its component is Kafka Kinect that has no number in this connector to ingest or data from
+
+various sources.
+
+So Kafka Connect, of course, is one of the most popular injection tools in the market today.
+
+The second one is Apache Nephi, the Apache.
+
+Nephi has also many processes to consume the data.
+
+Moreover, it is a GUI based, which means it provides a beautiful interface and it also provides few
+
+beautiful capabilities, such as adding field for removing the field from the data, changing the file format
+
+and many other things while ingesting the data.
+
+So obviously Apache Naifeh is also in my list as an injection tool.
+
+The next one is the Apache flume
+
+Apache flume is a part of hadoop framework.
+
+hadoop framework is a collection of tools
+
+that is used to process massive data.
+
+And it was the first framework in the market that was introduced in 2009 to process the big data.
+
+And over the period of time, many tools become a part of hadoop and namely Apache flume is one of
+
+them.
+
+Let me tell you apache flume has a number of connectors to ingest the data from various channels.
+
+And the last in my list is Apache Scoop.
+
+So Apache Scoop is again part of Hadoop framework, but it is very limited in functionality because
+
+it provides a connector to ingest the data only from RDBMS databases such as Oracle, MySQL, Postgres,
+
+etc..
+
+So why I have kept it in my list because it is very, very simple to learn.
+
+OK, so these are the four most popular ingestion tools, right.
+
+That can be used to ingest the data.
+
+So once we have ingested the data, we may need to store it somewhere.
+
+Right.
+
+But since we are talking about big data also, it is quite obvious that we cannot store that on a single
+
+machine.
+
+We have to somehow split our data and distribute that massive data.
+
+So that's why we need something called as distributed storage.
+
+The first storage that we will discuss is HDFS, it is part of hadoop.
+
+Hadoop framework was the first in the market to introduce distributed storage in 2009.
+
+And then as the cloud computing came into the market, all the cloud providers start providing their
+
+distributed storage.
+
+Like Microsoft, Cloud has given their distributed storage something called as azure blob storage.
+
+Amazon Cloud has provided S3.
+
+The Google cloud has provided Google cloud storage.
+
+So all of these storage are distributed in nature means your data would not be stored on a single machine.
+
+If you upload your data to these storage, your data will be divided and then will be stored on multiple
+
+machine.
+
+Obviously all of that process would be transparent to you.
+
+You will never get to know that.
+
+So once you have stored the data, what is the next step you want to do with your data?
+
+You may need to process the data, right?
+
+You may need to clean it.
+
+You may need to validate something or u need to enrich your data into some other format.
+
+So for all that, you need a processing tool that is capable to run in a distributed fashion because
+
+our data is distributed right.
+
+So the first of the framework that I would see is very popular in processing is Apache Spark.
+
+It is the market leader and it can be used to process the data in realtime as well as the data that
+
+is there on some distributed storage.
+
+OK, the next one I would say, is Kafka streaming.
+
+So this particular processing tool can be used in just the data in real time and then do processing
+
+on top of it.
+
+Then we have a apache storm flink all of these frameworks and most commonly used for realtime processing.
+
+But if I have to recommend you, I would say always start with Apache Spark, because undoubtedly Apache
+
+Spark is the market leader right now.
+
+So now, once you have processed your data, the data can be used for different.
+
+Purposes and by different people, so by different people, I mean, for an example, your company has
+
+a data analyst who wants to run some analytic queries on top of your process data to gain some business
+
+insight.
+
+And for that, he may use something called Apache Hive that is an analytic tool and again, the part
+
+of Hadoop framework.
+
+But if you are using some cloud technology like Amazon, Google, Microsoft, they may provide some
+
+other tools as well.
+
+But with respect to open source Apache HIVers, the most popular analytics tools used by data analyst,
+
+OK, or your process data can also be consumed by data scientist to run their machine learning algorithms
+
+using some machine learning tools like Apache Spark also provide something called as MLib to write machine
+
+learning algorithms.
+
+The other thing you may need to do with your processed data is you may need to store it on some noSql
+
+database, such as Cassandre MongoDB, HBAse or maybe some RDBMS database.
+
+Right.
+
+If you don't know what the NoSql databases, just think of them as distributed database in which
+
+your database system is not limited to a single machine.
+
+It is divided into multiple machine and and your data as well.
+
+OK, finally, you may also want to visualize your processed data in form of pie charts dashboard.
+
+And for that you may use many of the well-known visualization tools like tablue PowerBI by, etc..
+
+So these are the main component of any big data system.
+
+But this is not the end because for a big data system to run in a secure and efficient manner, we may
+
+need a few more things.
+
+So the first one is the cluster manager.
+
+So the cluster manager is used to manage the cluster resources such as your memory CPU's and monitors
+
+the health of running elements in the clusters, balances, work load and a lot of more things like
+
+cluster manager is a very crucial part to any of the big data system.
+
+And the most common cluster managers that are in the market today is Kubernetes.
+
+Apache, Mesos and Hadoop Yarn.
+
+And then the second thing, in order to make your big data system more secure, we also may need to
+
+use some tools that can provide authorisation and authentication capabilities to provide more security
+
+to your cluster.
+
+OK, so the most commonly used authorisation and authentication tools are Kerberos, Apache Ranger
+
+Apache, Sentry, etc..
+
+ you don't need to
+
+know all of them.
+
+OK, like if you are a big data engineer, you may not need to know the authorisation and authentication
+
+tools because that is a part of administration.
+
+OK, and if you are an IT administrator, you don't need to know the processing tools, so you have
+
+to choose your area of work.
+
+And accordingly, you have to choose your tools that you may need to require in your day to day job.
+
+So the next important component that is important for a big data engineer or developer is a workflow
+
+manager.
+
+So what is a workflow manager?
+
+We have already seen that there are various stages in Big data eco system like starting from injection
+
+processing, storing it back to some storage nosql database and running some analytic queries, etc.
+
+So all of these steps can be clubbed into a workflow to run automatically using some workflow manager
+
+and the most popular workflow manager, I would say, in today's market is a Apache airflow
+
+
+
+Aperture airflow is the most commonly used workflow manager nowadays because it provides not only workflow
+
+creation, but also the scheduling capabilities and beautiful interface to see what is running, what
+
+field, etc..
+
+And the other one that was a little old one is oozie that is simpler than airflow.
+
+But I would not recommend to you that.
+
+OK, so the next thing that is important for a big data ecosystem is monitoring.
+
+Again, this is a part of administrator.
+
+If you are a developer, you don't need to worry about these tools.
+
+But if you are an administrator, you may need to worry.
+
+What are monitoring tools are like.
+
+OK, so your big data system may also need some good tools to visualize the resource consumption, to
+
+see other metrics of your cluster.
+
+For an example, let's say you have 100 200 machine cluster and one day it stops working.
+
+So you need a way to see what is the issue.
+
+If this is a network issue, some process is stuck.
+
+There is there is some CPU issue.
+
+So for that, you need some monitoring tool and.
+
+The most famous monitoring tool is prometheus grafana.
+
+OK, so you may need to know those tools if you are going into the administrator field.
+
+So that was the brief of any big data systems are.
+
+
+////////////////////////////////////////////////////////////////
+Map Reduce
+
+The next thing that we are going to look into is just overview how the map reduce works, why we are
+
+doing so, because most of the technologies that we will be looking into, like hive sqoop flume underlying
+
+the scenes, they are actually running map reduce jobs.
+
+So it is important to understand a little bit about how these map reduce works so that we can understand
+
+those technologies much better.
+
+So let's take an example.
+
+See, we have a four node cluster and say we had a file that was representing the data file in which
+
+the first field was the location.
+
+Say this is the location, this is the location.
+
+And then it is showing me the average temperature for that particular location.
+
+What my agenda is, I want to calculate which location has the minimum temperature.
+
+So suppose this file has been a small file in my local file system, I could write a simple Java program
+
+or any language saying that sort this data, give me the data that is having the minimum temperature
+
+and it would be very easy.
+
+But now, in terms of the big data, this data we know is not on a single machine but has been divided
+
+on multiple machine.
+
+So we can take the benefit of that.
+
+Right.
+
+We can do the parallel processing on top of that.
+
+So that's why this map reduce paradigm was introduced.
+
+So the map reduce has two phases.
+
+One is the map phase and one is to reduce phase.
+
+
+Map will do nothing, but it will calculate the minimum from all four machine on those particular nodes.
+
+What is the minimum temperature?
+
+Is it is D of then in this particular node it will calculate that it is L of minus 20.
+
+The algorithm would be exactly the same as if we have done it on the local machine.
+
+But right now it is just running on multiple machines.
+
+So onece the map phase is completed.
+
+This will be the result from these four mappers.
+
+So these four mappers results will be fed to the reducer phase.
+
+That is the final reduction phase where we will get our final output.
+
+So the data from here, here, here can be fed to reducer phase.
+
+So this is another Java program.
+
+So this will give me the final result from this all goes for the same logic will apply and it will give
+
+me a plus minus 20.
+
+So that is just a brief overview.
+
+
+you might be thinking how the resource
+
+management have everything are happening.
+
+So we have Yarn Cluster Manager in Hadoop.
+
+Yarn Cluster Manager is not just for hadoop, spark can run on top of it,
+
+Flink All these new frameworks even can use Yarn cluster manager.
+
+So when I say cluster manager, what it is, it is the resource allocator.
+
+So resource allocator means it is responsible for allocating the machine with some specific configuration.
+
+So let me take the example that can make it much more clear.
+
+So in our yarn cluster manager, there are two deamon processes that are very important.
+
+One is the resource manager and one is the node manager.
+
+So resource manager is one par cluster and node manager is running on all worker nodes.
+
+So see, we have this five node cluster and on one of the node only this resource manager is running
+
+and all the rest of the nodes
+
+These node managers are running.
+
+So this resource manager will be responsible for allocating the resources, spawning up the virtual machine,
+
+because this worker nodes could be a big machine that could be 32 core 64 GB machine.
+
+And we don't want to consume all of that configuration just to run our small jobs.
+
+Right.
+
+So we may end up asking the resource manager that this is my job and I want to run it on like one GB 2 core 
+
+ machine.
+
+So what it will do, it will allocate me those resources from this particular machine and we will be
+
+spawning up the virtual machines on top of these big machines.
+
+So because we don't want to waste all those resources.
+
+Right, resources are very critical when we talk in terms of big data, all the information about the
+
+resources lies with this resource manager it knows everything about this cluster.
+
+It knows how many machines are there, what are the configuration of this machine, how many machines
+
+configuration are free at the moment?
+
+So this is the guy who knows everything about the cluster.
+
+So to get the locality of the data, it will ask the node manager you can contact with the node manager
+
+to get which
+
+Machine has those blocks of information so that it can spawn up this virtual machine on the same machine
+
+that is carrying those data blocks.
+
+So this client node is here and
+
+We are submitting our mass reduce job.
+
+So see, I have run some map reduce job to the first point of contact will be it will contact the resource
+
+manager.
+
+That is nothing but a.
+
+deamon process that is running on some other machines, this resource manager, first of all, will not
+
+allocate the resources directly.
+
+What it will do, it will contact one of the node manager.
+
+That is another deamons 
+
+Or you can see processes that are running on each and every worker nodes
+
+So it will asked one of the node manager to start the application master.
+
+It is another process that will be responsible for handling the entire lifecycle of this job.
+
+So so what I what I'm showing you is exactly how it happens in Spark also.
+
+
+But there are differences.
+
+But this is how even the spark application runs that it will contact as a resource manager, then
+
+resource manager contact one of the node manager to start this, another process that is an application
+
+master and this application master is now will contact with the resource manager again and ask him that.
+
+I allocate me some resources for this particular mass-produced job.
+
+This resource manager will allocate the resources and then this application master will contact with
+
+the manager to one of those virtual machines that I was telling the application.
+
+Master says, I want 1 GB 2 core machines, two of them.
+
+So it will start this virtual machine.
+
+And inside those virtual machine, these actual jobs will be running.
+
+Or you could say JVM process in case of mass reduce because it's a Java process.
+
+So it will be running inside this jaivin processes.
+
+So that's an overview of how the things are happening.
+
+The resources are allocated.
+
+Also, these tasks will contact this application master to send its heartbeat that time running fine.
+
+So if one of the node goes down so it will stop sending the heartbeat to application master and will become aware that
+
+one of my process is now down.
+
+I need to start this process on some other machine.
+
+So that is how fault tolerance also comes into picture.
+
+We always say that these big data frameworks like the map produce the spark are fault tolerent
+
+means if some of the jobs get failed, we don't have to restart.
+
+It will be tried three times and then if it doesn't even happen, then it will get failed.
+
+So this application master will see ok this heartbeat of this task has been not been receiving,
+
+so it will ask the resource manager it again.
+
+to Give me some more resources because I want to re run this task so It can re run the this task on some other
+
+ machine.
+
+
+

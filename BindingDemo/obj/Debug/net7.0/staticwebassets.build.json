@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "PvdEHfWxi8O2t9vaOg+VbRnZUXSpYO0K3412pi7I/tc=",
+  "Source": "BindingDemo",
+  "BasePath": "_content/BindingDemo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BindingDemo\\wwwroot",
+      "Source": "BindingDemo",
+      "ContentRoot": "D:\\dotnet\\feb\\BindingDemo\\BindingDemo\\wwwroot\\",
+      "BasePath": "_content/BindingDemo",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\dotnet\\feb\\BindingDemo\\BindingDemo\\wwwroot\\fabric.pdf",
+      "SourceId": "BindingDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\dotnet\\feb\\BindingDemo\\BindingDemo\\wwwroot\\",
+      "BasePath": "_content/BindingDemo",
+      "RelativePath": "fabric.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fabric.pdf"
+    }
+  ]
+}

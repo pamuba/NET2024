@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "MJ/Ue51Po7H8AMMM+DTTXvqIabZRokEZWbBFleefDac=",
+  "Source": "RoutingDemo",
+  "BasePath": "_content/RoutingDemo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "RoutingDemo\\wwwroot",
+      "Source": "RoutingDemo",
+      "ContentRoot": "D:\\dotnet\\feb\\RoutingDemo\\RoutingDemo\\wwwroot\\",
+      "BasePath": "_content/RoutingDemo",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\dotnet\\feb\\RoutingDemo\\RoutingDemo\\wwwroot\\Sample.txt",
+      "SourceId": "RoutingDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\dotnet\\feb\\RoutingDemo\\RoutingDemo\\wwwroot\\",
+      "BasePath": "_content/RoutingDemo",
+      "RelativePath": "Sample.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Sample.txt"
+    }
+  ]
+}

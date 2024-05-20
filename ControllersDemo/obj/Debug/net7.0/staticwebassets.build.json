@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "iYw0LkVoOnUv3yYfuwoxsDI8izJryZxGgU+orL3TDhs=",
+  "Source": "ControllersDemo",
+  "BasePath": "_content/ControllersDemo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ControllersDemo\\wwwroot",
+      "Source": "ControllersDemo",
+      "ContentRoot": "D:\\dotnet\\feb\\ControllersDemo\\ControllersDemo\\wwwroot\\",
+      "BasePath": "_content/ControllersDemo",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

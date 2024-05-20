@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\dotnet\\feb\\ControllersDemo\\ControllersDemo\\wwwroot\\fabric.pdf",
+      "PackagePath": "staticwebassets\\fabric.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ControllersDemo.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ControllersDemo.props",
+      "PackagePath": "build\\ControllersDemo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ControllersDemo.props",
+      "PackagePath": "buildMultiTargeting\\ControllersDemo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ControllersDemo.props",
+      "PackagePath": "buildTransitive\\ControllersDemo.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

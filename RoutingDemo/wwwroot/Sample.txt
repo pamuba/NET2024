@@ -1,0 +1,2 @@
+﻿This will surely help us to prevent sensitive data from being misused, let's jump to code snippets in order to understand the development approach, here we will use the inbuilt feature of .NET core DataProtectorTokenProvider. It will take care of encrypting and decrypting our private data (Query Parameter) or any other sensitive data.
+ 

@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "C5dZhmex05pHZYtuVFnj/VghZPC4U3aya932DFIgqZc=",
+  "Source": "StaticFilesDemos",
+  "BasePath": "_content/StaticFilesDemos",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "StaticFilesDemos\\wwwroot",
+      "Source": "StaticFilesDemos",
+      "ContentRoot": "D:\\dotnet\\feb\\consoleapps\\StaticFilesDemos\\wwwroot\\",
+      "BasePath": "_content/StaticFilesDemos",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
