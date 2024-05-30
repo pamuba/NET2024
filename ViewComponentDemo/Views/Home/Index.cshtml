@@ -1,0 +1,55 @@
+﻿@using ViewComponentDemo.Models;
+@{
+    ViewBag.Title = "Home";
+}
+<H1>HOME</H1>
+@* @{
+    PersonGridModel personGridModel = new PersonGridModel()
+            {
+                GridTitle = "Persons",
+
+                Persons = new List<Person> {
+                    new Person(){ PersonName="Mark" , JobTitle="Manager"},
+                    new Person(){ PersonName="Bill" , JobTitle="Salse"},
+                    new Person(){ PersonName="Sam" , JobTitle="QA"}
+                }
+            };
+
+}
+@await Component.InvokeAsync("Grid", new {
+    x = 10,
+    y = 20,
+    grid = personGridModel
+})
+
+@{
+    PersonGridModel personGridModel2 = new PersonGridModel()
+            {
+                GridTitle = "Persons",
+
+                Persons = new List<Person> {
+                    new Person(){ PersonName="Arun" , JobTitle="Manager"},
+                    new Person(){ PersonName="Varun" , JobTitle="Salse"},
+                    new Person(){ PersonName="Karun" , JobTitle="QA"}
+                }
+            };
+
+}
+@await Component.InvokeAsync("Grid", new {
+    x = 10,
+    y = 20,
+    grid = personGridModel2
+})
+
+
+@await Component.InvokeAsync("Grid")
+ *@
+
+
+ <button class="button button-blue-back" id="load-friends-button">Load Persons</button>
+
+ <div id="list"></div>
+
+ <script src="~/person.js">
+
+ </script>

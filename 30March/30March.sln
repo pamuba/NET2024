@@ -27,6 +27,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoWebApplication", "..\ne
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoutingDemo", "..\RoutingDemo\RoutingDemo.csproj", "{FBCB31EA-1775-4E08-B670-1AC41ED7CD1E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewComponentDemo", "..\ViewComponentDemo\ViewComponentDemo.csproj", "{15BA5563-B6D7-42CF-A78A-B39288BE90D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBFirsts", "..\DBFirsts\DBFirsts.csproj", "{D413BDB1-5283-40A9-B936-E91E07367712}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{FBCB31EA-1775-4E08-B670-1AC41ED7CD1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBCB31EA-1775-4E08-B670-1AC41ED7CD1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBCB31EA-1775-4E08-B670-1AC41ED7CD1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15BA5563-B6D7-42CF-A78A-B39288BE90D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15BA5563-B6D7-42CF-A78A-B39288BE90D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15BA5563-B6D7-42CF-A78A-B39288BE90D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15BA5563-B6D7-42CF-A78A-B39288BE90D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D413BDB1-5283-40A9-B936-E91E07367712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D413BDB1-5283-40A9-B936-E91E07367712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D413BDB1-5283-40A9-B936-E91E07367712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D413BDB1-5283-40A9-B936-E91E07367712}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

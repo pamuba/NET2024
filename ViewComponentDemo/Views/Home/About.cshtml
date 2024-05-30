@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<H1>ABOUT</H1>
+<p>
+    RNN models are mostly used in the fields of natural language processing(NLP) and speech recognition. The main reason that the recurrent nets are more exciting is that they allow us to operate over sequences of vectors: Sequence in the input, the output, or in the most general case, both. A few examples may this more concrete:
+    RNN models are mostly used in the fields of natural language processing(NLP) and speech recognition. The main reason that the recurrent nets are more exciting is that they allow us to operate over sequences of vectors: Sequence in the input, the output, or in the most general case, both. A few examples may this more concrete:
+</p>
+
+@* @await Component.InvokeAsync("Grid") *@
+
+
+@using ViewComponentDemo.Models;
+@{
+    PersonGridModel personGridModel = new PersonGridModel()
+            {
+                GridTitle = "Persons",
+
+                Persons = new List<Person> {
+                    new Person(){ PersonName="Arun" , JobTitle="Manager"},
+                    new Person(){ PersonName="Varun" , JobTitle="Salse"},
+                    new Person(){ PersonName="Karun" , JobTitle="QA"}
+                }
+            };
+
+}
+<vc:grid x="100" y="200" grid="personGridModel"></vc:grid>
