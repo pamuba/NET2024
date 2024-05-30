@@ -13,7 +13,7 @@ namespace ModelValidationDemo.Models
         [RegularExpression("^[A-Za-z .]*$", ErrorMessage = "{0} shold alphabets, space or .")]
         public string? PersonName { get; set; }
 
-        [BindNever]
+        //[BindNever]
         [ValidateNever]
         [RegularExpression("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", ErrorMessage = "{0} is not a proper email")]
         //[EmailAddress(ErrorMessage = "{0} is not a proper email")]
@@ -45,6 +45,8 @@ namespace ModelValidationDemo.Models
         public DateTime? ToDate { get; set; }
 
         public int? Age { get; set; }
+
+        public List<string> Tags { get; set; } = new List<string>();
 
         public override string ToString()
         {

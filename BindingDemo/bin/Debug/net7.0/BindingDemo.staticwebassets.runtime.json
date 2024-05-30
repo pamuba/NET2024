@@ -1,1 +1,1 @@
-{"ContentRoots":["D:\\dotnet\\feb\\BindingDemo\\BindingDemo\\wwwroot\\"],"Root":{"Children":{"fabric.pdf":{"Children":null,"Asset":{"ContentRootIndex":0,"SubPath":"fabric.pdf"},"Patterns":null}},"Asset":null,"Patterns":[{"ContentRootIndex":0,"Pattern":"**","Depth":0}]}}
+{"ContentRoots":["D:\\dotnet\\feb\\consoleapps\\BindingDemo\\wwwroot\\"],"Root":{"Children":{"fabric.pdf":{"Children":null,"Asset":{"ContentRootIndex":0,"SubPath":"fabric.pdf"},"Patterns":null}},"Asset":null,"Patterns":[{"ContentRootIndex":0,"Pattern":"**","Depth":0}]}}

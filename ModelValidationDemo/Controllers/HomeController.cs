@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using ModelValidationDemo.CustomModelBinders;
 using ModelValidationDemo.Models;
 
 namespace ModelValidationDemo.Controllers
@@ -8,8 +9,12 @@ namespace ModelValidationDemo.Controllers
     {
         //yeild + extension 
         [Route("register")]
-        public IActionResult Index(Person person)
+
+        //[FromBody][ModelBinder(BinderType = typeof(PersonModelBinder))]
+        public IActionResult Index(Person person,[FromHeader(Name = "User-Agent")] string UserAgent)
         {
+            String data = Request.Headers["User-Agent"];
+
             if (!ModelState.IsValid) {
 
                 //List<string> errorsList = new List<string>();
@@ -25,6 +30,7 @@ namespace ModelValidationDemo.Controllers
                 error.ErrorMessage));
                 return BadRequest(errorsList);
             }
+            //ControllerContext.HttpContext.Request.Headers["User-agent"]
             return Content($"{person}");
         }
     }

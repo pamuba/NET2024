@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iYw0LkVoOnUv3yYfuwoxsDI8izJryZxGgU+orL3TDhs=",
+  "Hash": "mJ4iDjgAqWFMguxMNGBms75q4TyfRVO1L6/CEB+xK00=",
   "Source": "ControllersDemo",
   "BasePath": "_content/ControllersDemo",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "ControllersDemo\\wwwroot",
       "Source": "ControllersDemo",
-      "ContentRoot": "D:\\dotnet\\feb\\ControllersDemo\\ControllersDemo\\wwwroot\\",
+      "ContentRoot": "D:\\dotnet\\feb\\consoleapps\\ControllersDemo\\wwwroot\\",
       "BasePath": "_content/ControllersDemo",
       "Pattern": "**"
     }

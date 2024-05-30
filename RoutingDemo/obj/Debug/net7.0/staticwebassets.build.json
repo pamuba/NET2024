@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MJ/Ue51Po7H8AMMM+DTTXvqIabZRokEZWbBFleefDac=",
+  "Hash": "TKrNVYnzKWkdaOUmJMwKXpGzpqF+p7mXKfEaAWGg1Ys=",
   "Source": "RoutingDemo",
   "BasePath": "_content/RoutingDemo",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "RoutingDemo\\wwwroot",
       "Source": "RoutingDemo",
-      "ContentRoot": "D:\\dotnet\\feb\\RoutingDemo\\RoutingDemo\\wwwroot\\",
+      "ContentRoot": "D:\\dotnet\\feb\\consoleapps\\RoutingDemo\\wwwroot\\",
       "BasePath": "_content/RoutingDemo",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\dotnet\\feb\\RoutingDemo\\RoutingDemo\\wwwroot\\Sample.txt",
+      "Identity": "D:\\dotnet\\feb\\consoleapps\\RoutingDemo\\wwwroot\\Sample.txt",
       "SourceId": "RoutingDemo",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\dotnet\\feb\\RoutingDemo\\RoutingDemo\\wwwroot\\",
+      "ContentRoot": "D:\\dotnet\\feb\\consoleapps\\RoutingDemo\\wwwroot\\",
       "BasePath": "_content/RoutingDemo",
       "RelativePath": "Sample.txt",
       "AssetKind": "All",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PvdEHfWxi8O2t9vaOg+VbRnZUXSpYO0K3412pi7I/tc=",
+  "Hash": "kODIjHYnktQrBB9i283U6dbf0bxLJOk4/iXtfLgedto=",
   "Source": "BindingDemo",
   "BasePath": "_content/BindingDemo",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "BindingDemo\\wwwroot",
       "Source": "BindingDemo",
-      "ContentRoot": "D:\\dotnet\\feb\\BindingDemo\\BindingDemo\\wwwroot\\",
+      "ContentRoot": "D:\\dotnet\\feb\\consoleapps\\BindingDemo\\wwwroot\\",
       "BasePath": "_content/BindingDemo",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\dotnet\\feb\\BindingDemo\\BindingDemo\\wwwroot\\fabric.pdf",
+      "Identity": "D:\\dotnet\\feb\\consoleapps\\BindingDemo\\wwwroot\\fabric.pdf",
       "SourceId": "BindingDemo",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\dotnet\\feb\\BindingDemo\\BindingDemo\\wwwroot\\",
+      "ContentRoot": "D:\\dotnet\\feb\\consoleapps\\BindingDemo\\wwwroot\\",
       "BasePath": "_content/BindingDemo",
       "RelativePath": "fabric.pdf",
       "AssetKind": "All",
