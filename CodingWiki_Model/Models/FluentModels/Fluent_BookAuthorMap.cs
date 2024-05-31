@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace CodingWiki_Model.Models
 {
-    public class BookAuthorMap
+    public class Fluent_BookAuthorMap
     {
-        [ForeignKey("Book")]
-        [Key]
+        [ForeignKey("Fluent_Book")]
+        //[Key]
         public int Book_Id { get; set; }
 
-        [ForeignKey("Author")]
-        [Key]
+        [ForeignKey("Fluent_Author")]
+        //[Key]
         public int Author_Id { get; set; }
 
-        public Book Book { get; set; }
-        public Author Author { get; set; }
+        public Fluent_Book Fluent_Book { get; set; }
+        public Fluent_Author Fluent_Author { get; set; }
     }
 }
