@@ -10,11 +10,11 @@ namespace CodingWiki_Model.Models
 {
     public class Fluent_BookAuthorMap
     {
-        [ForeignKey("Fluent_Book")]
+        //[ForeignKey("Fluent_Book")]
         //[Key]
         public int Book_Id { get; set; }
 
-        [ForeignKey("Fluent_Author")]
+        //[ForeignKey("Fluent_Author")]
         //[Key]
         public int Author_Id { get; set; }
 

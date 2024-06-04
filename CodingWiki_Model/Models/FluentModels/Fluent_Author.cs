@@ -28,7 +28,8 @@ namespace CodingWiki_Model.Models
         
         }
 
-        public List<Fluent_Book> Fluent_Books { get; set; }
+        //public List<Fluent_Book> Fluent_Books { get; set; }
+        public List<Fluent_BookAuthorMap> Fluent_BookAuthorMap { get; set; }
 
     }
 }
