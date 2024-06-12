@@ -21,7 +21,7 @@ namespace MagicVilla_VillaAPI.Controllers
 		[HttpPost("login")]
 		public async Task<IActionResult> Login([FromBody] LoginRequestDTO model)
 		{
-			var loginResponse = _userRepository.Login(model);
+			var loginResponse = await _userRepository.Login(model);
 			if (loginResponse.User == null || string.IsNullOrEmpty(loginResponse.Token)) {
 				//return BadRequest(new { message = "Usernaem or Password is Wrong"});
 				_response.StatusCode = HttpStatusCode.BadRequest;
@@ -37,7 +37,29 @@ namespace MagicVilla_VillaAPI.Controllers
 		[HttpPost("register")]
 		public async Task<IActionResult> Register([FromBody] RegistrationRequestDTO model)
 		{
-			return View();
+			var ifUserNameUnique = _userRepository.IsUniqueUser(model.UserName);
+			if (!ifUserNameUnique)
+			{
+				_response.StatusCode = HttpStatusCode.BadRequest;
+				_response.IsSuccess = false;
+				_response.ErrorMessages.Add("Usernaem Already Exist");
+				return BadRequest(_response);
+			}
+
+			var user = await _userRepository.Register(model);
+
+			if (user == null)
+			{
+				_response.StatusCode = HttpStatusCode.BadRequest;
+				_response.IsSuccess = false;
+				_response.ErrorMessages.Add("Error While Registering");
+				return BadRequest(_response);
+			}
+			_response.StatusCode = HttpStatusCode.OK;
+			_response.IsSuccess = true;
+			
+			return Ok(_response);
+
 		}
 	}
 }
