@@ -12,7 +12,7 @@ namespace MagicVilla_VillaAPI.Models.Dto
         public string Details { get; set; }
         [Required]
         public double Rate { get; set; }
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
         public string Amenity { get; set; }
     }
 }
