@@ -5,6 +5,7 @@ using MagicVilla_VillaAPI.Migrations;
 using MagicVilla_VillaAPI.Models;
 using MagicVilla_VillaAPI.Models.Dto;
 using MagicVilla_VillaAPI.Repository.IRepository;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,13 +23,15 @@ namespace MagicVilla_VillaAPI.Controllers
         private readonly ApplicationDbContext _db;
         private readonly IMapper _mapper;
         private readonly IVillaNumberRepository _dbVillaNumber;
+        private readonly IVillaRepository _dbVilla;
 
-        public VillaNumberAPIController(ILogging logger, ApplicationDbContext db, IMapper mapper, IVillaNumberRepository dbVillaNumber)
+        public VillaNumberAPIController(ILogging logger, ApplicationDbContext db, IMapper mapper, IVillaNumberRepository dbVillaNumber, IVillaRepository dbVilla)
         {
             _logger = logger;
             _db = db;
             _mapper = mapper;
             _dbVillaNumber = dbVillaNumber;
+            _dbVilla = dbVilla;
             this._response = new();
         }
 
@@ -97,7 +100,12 @@ namespace MagicVilla_VillaAPI.Controllers
                 //Names should be unique
                 if (await _dbVillaNumber.GetAsync(u => u.VillaNo == createDTO.VillaNo) != null)
                 {
-                    ModelState.AddModelError("CustomError", "Villa alreayd exists");
+                    ModelState.AddModelError("ErrorMessage", "Villa alreayd exists");
+                    return BadRequest(ModelState);
+                }
+                if (await _dbVilla.GetAsync(u => u.Id == createDTO.VillaID) == null)
+                {
+                    ModelState.AddModelError("ErrorMessage", "Villa ID is invalid");
                     return BadRequest(ModelState);
                 }
                 if (createDTO == null)
@@ -160,7 +168,11 @@ namespace MagicVilla_VillaAPI.Controllers
                 {
                     return BadRequest();
                 }
-
+                if (await _dbVilla.GetAsync(u => u.Id == updateDTO.VillaID) == null)
+                {
+                    ModelState.AddModelError("ErrorMessage", "Villa ID is invalid");
+                    return BadRequest(ModelState);
+                }
                 VillaNumber model = _mapper.Map<VillaNumber>(updateDTO);
 
                 await _dbVillaNumber.UpdateAsync(model);

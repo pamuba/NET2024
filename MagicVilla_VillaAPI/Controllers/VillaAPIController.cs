@@ -33,7 +33,7 @@ namespace MagicVilla_VillaAPI.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        //[Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<APIResponse>> GetVillas()
         {
@@ -54,7 +54,7 @@ namespace MagicVilla_VillaAPI.Controllers
         }
 
         [HttpGet("{id:int}", Name = "GetVilla")]
-		[Authorize(Roles = "admin")]
+		//[Authorize(Roles = "admin")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -100,7 +100,7 @@ namespace MagicVilla_VillaAPI.Controllers
                 //Names should be unique
                 if (await _dbVilla.GetAsync(u => u.Name.ToLower() == createDTO.Name.ToLower()) != null)
                 {
-                    ModelState.AddModelError("CustomError", "Villa alreayd exists");
+                    ModelState.AddModelError("ErrorMessage", "Villa alreayd exists");
                     return BadRequest(ModelState);
                 }
                 if (createDTO == null)
