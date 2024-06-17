@@ -34,12 +34,28 @@ namespace MagicVilla_VillaAPI.Controllers
 
         [HttpGet]
         //[Authorize]
+        [ResponseCache(Duration = 30)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<APIResponse>> GetVillas()
+        public async Task<ActionResult<APIResponse>> GetVillas([FromQuery(Name="fillOccupancy")]int occupancy,
+            [FromQuery]string? search, int pageSize = 4, int pageNumber = 3)
         {
             try
             {
-                IEnumerable<Villa> villaList = await _dbVilla.GetAllAsync();
+                IEnumerable<Villa> villaList;
+
+
+                if (occupancy > 0) {
+                    villaList = await _dbVilla.GetAllAsync(u => u.Occupancy == occupancy, 
+                        pageSize: pageSize, pageNumber:pageNumber);
+                }
+                else {
+                    villaList = await _dbVilla.GetAllAsync(pageSize: pageSize, pageNumber: pageNumber);
+                }
+                if (!string.IsNullOrEmpty(search)) {
+                    villaList = villaList.Where(u => u.Name.ToLower().Contains(search) || 
+                    u.Sqft.ToString().Contains(search));
+                }
+
                 _logger.Log("Getting all villas", "");
                 _response.Result = _mapper.Map<List<VillaDTO>>(villaList);
                 _response.StatusCode = HttpStatusCode.OK;
@@ -58,6 +74,7 @@ namespace MagicVilla_VillaAPI.Controllers
 		[ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ResponseCache(CacheProfileName = "CacheProfile")]
         public async Task<ActionResult<APIResponse>> GetVilla(int id)
         {
             try
