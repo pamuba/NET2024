@@ -4,6 +4,7 @@ using MagicVilla_VillaAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagicVilla_VillaAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240624052342_last1")]
+    partial class last1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -98,7 +101,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 1,
                             Amenity = "",
-                            CreatedDate = new DateTime(2024, 6, 24, 20, 12, 30, 204, DateTimeKind.Local).AddTicks(2054),
+                            CreatedDate = new DateTime(2024, 6, 24, 10, 53, 42, 777, DateTimeKind.Local).AddTicks(1024),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "",
                             Name = "Royal Villa",
@@ -111,7 +114,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 2,
                             Amenity = "",
-                            CreatedDate = new DateTime(2024, 6, 24, 20, 12, 30, 204, DateTimeKind.Local).AddTicks(2081),
+                            CreatedDate = new DateTime(2024, 6, 24, 10, 53, 42, 777, DateTimeKind.Local).AddTicks(1042),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "",
                             Name = "Premium Pool Villa",
@@ -124,7 +127,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 3,
                             Amenity = "",
-                            CreatedDate = new DateTime(2024, 6, 24, 20, 12, 30, 204, DateTimeKind.Local).AddTicks(2085),
+                            CreatedDate = new DateTime(2024, 6, 24, 10, 53, 42, 777, DateTimeKind.Local).AddTicks(1044),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "",
                             Name = "Luxury Pool Villa",
@@ -137,7 +140,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 4,
                             Amenity = "",
-                            CreatedDate = new DateTime(2024, 6, 24, 20, 12, 30, 204, DateTimeKind.Local).AddTicks(2089),
+                            CreatedDate = new DateTime(2024, 6, 24, 10, 53, 42, 777, DateTimeKind.Local).AddTicks(1046),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "",
                             Name = "Diamond Villa",
@@ -150,7 +153,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 5,
                             Amenity = "",
-                            CreatedDate = new DateTime(2024, 6, 24, 20, 12, 30, 204, DateTimeKind.Local).AddTicks(2093),
+                            CreatedDate = new DateTime(2024, 6, 24, 10, 53, 42, 777, DateTimeKind.Local).AddTicks(1049),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "",
                             Name = "Diamond Pool Villa",

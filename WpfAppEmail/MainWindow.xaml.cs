@@ -42,16 +42,15 @@ namespace WpfAppEmail
             
             using (SQLiteConnection con = new SQLiteConnection(App.databasePath)) {
                 con.CreateTable<Contact>();
-                contacts = con.Table<Contact>().ToList();
+                contacts = (con.Table<Contact>().ToList()).OrderBy(c => c.Name).ToList();
+
+                //var variable = from c2 in contacts
+                //               orderby c2.Name
+                //               select c2;   
+
             }
             if (contacts != null) {
-                //foreach (Contact contact in contacts)
-                //{
-                //    conatctListView.Items.Add(new ListViewItem() {
-                //        Content = contact,
-                //    });
-                //}
-
+            
                 conatctListView.ItemsSource = contacts;
             }
         }
@@ -64,10 +63,28 @@ namespace WpfAppEmail
                 var filteredList = contacts.Where(c => c.Name.ToLower().Contains(searchBox.Text.ToLower())).ToList();
                 filteredList.Sort();
                 conatctListView.ItemsSource = filteredList;
+
+                var filteredList2 = from c2 in contacts
+                                    where c2.Name.ToLower().Contains(searchBox.Text.ToLower())
+                                    orderby c2.Email
+                                    select c2;  
+
+
             }
             else {
                 conatctListView.ItemsSource = contacts;
             }
+        }
+
+        private void conatctListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Contact selectedContact = (Contact)conatctListView.SelectedItem;
+            if (selectedContact != null)
+            {
+                ContactDetailsWindow contactDetailsWindow = new ContactDetailsWindow(selectedContact);
+                contactDetailsWindow.ShowDialog();
+            }
+            ReadDatabase();
         }
     }
 }

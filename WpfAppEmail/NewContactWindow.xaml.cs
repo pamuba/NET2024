@@ -24,6 +24,8 @@ namespace WpfAppEmail
         public NewContactWindow()
         {
             InitializeComponent();
+            Owner = Application.Current.MainWindow;
+            WindowStartupLocation = WindowStartupLocation.CenterOwner;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -43,6 +45,11 @@ namespace WpfAppEmail
             }
             //this.Close();
             Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();   
         }
     }
 }

@@ -67,10 +67,18 @@ namespace MagicVilla_VillaAPI.Repository
 				Name = registrationRequestDTO.Name,
 				Role = registrationRequestDTO.Role
 			};
-			await _db.LocalUsers.AddAsync(user);
-			await _db.SaveChangesAsync();
-			user.Password = "";
-			return user;
-		}
+			try {
+                await _db.LocalUsers.AddAsync(user);
+                await _db.SaveChangesAsync();
+                user.Password = "";
+               
+            } catch (Exception ex)
+			{
+
+
+			}
+            return user;
+
+        }
 	}
 }
