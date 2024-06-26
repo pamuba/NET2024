@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="9o64S/6cNJ8xnMWlUmh5Dzn4trhinsdBPDRvf0pnWA4=">
+<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="d8eaL/b4qW0JyA6jisVPLlRQGuP1DJLnB/6HLNjxMQk=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IMathService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IMathService" contract="MathServiceReference.IMathService" bindingType="basicHttpBinding" address="http://localhost:56024/MathService.svc" bindingConfiguration="BasicHttpBinding_IMathService">
+    <endpoint name="BasicHttpBinding_IMathService" contract="MathServiceReference.IMathService" bindingType="basicHttpBinding" address="http://localhost:59851/MathService.svc" bindingConfiguration="BasicHttpBinding_IMathService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:56024/MathService.svc</serializedValue>
+          <serializedValue>http://localhost:59851/MathService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="71b222d2-9a78-4c11-950f-33e4852d3b29" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="ccad22f5-649c-4f56-88af-d8223c012494" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:56024/MathService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:59851/MathService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MathService.xsd" MetadataType="Schema" ID="09cfecbb-25a1-4888-8721-cab3d770ca06" SourceId="1" SourceUrl="http://localhost:56024/MathService.svc?xsd=xsd1" />
-    <MetadataFile FileName="MathService.disco" MetadataType="Disco" ID="98b6e1a3-7885-4bf0-95ad-b40a62871bf1" SourceId="1" SourceUrl="http://localhost:56024/MathService.svc?disco" />
-    <MetadataFile FileName="MathService1.xsd" MetadataType="Schema" ID="bbd74590-b8a5-4f1b-957f-8fef2a405660" SourceId="1" SourceUrl="http://localhost:56024/MathService.svc?xsd=xsd2" />
-    <MetadataFile FileName="MathService2.xsd" MetadataType="Schema" ID="6ba721c5-adc2-44f4-8657-ca1d5feb76cb" SourceId="1" SourceUrl="http://localhost:56024/MathService.svc?xsd=xsd0" />
-    <MetadataFile FileName="MathService.wsdl" MetadataType="Wsdl" ID="eb43a612-ef7a-4ce8-8dba-3681c5c1b9d5" SourceId="1" SourceUrl="http://localhost:56024/MathService.svc?wsdl" />
+    <MetadataFile FileName="MathService.xsd" MetadataType="Schema" ID="1d93ed2e-f285-49cb-8461-acee18fff972" SourceId="1" SourceUrl="http://localhost:59851/MathService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MathService.disco" MetadataType="Disco" ID="bb581eb5-6d34-41ba-a814-eaafb8c6c794" SourceId="1" SourceUrl="http://localhost:59851/MathService.svc?disco" />
+    <MetadataFile FileName="MathService1.xsd" MetadataType="Schema" ID="c672002d-5c41-4f11-a7c6-0b4e48a8c096" SourceId="1" SourceUrl="http://localhost:59851/MathService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MathService.wsdl" MetadataType="Wsdl" ID="3db9fa3f-15d3-42d3-b243-28fee7ad86e2" SourceId="1" SourceUrl="http://localhost:59851/MathService.svc?wsdl" />
+    <MetadataFile FileName="MathService2.xsd" MetadataType="Schema" ID="847d2b57-cf8d-4c02-a8dd-94a270b3b27b" SourceId="1" SourceUrl="http://localhost:59851/MathService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
