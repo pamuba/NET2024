@@ -16,7 +16,9 @@ namespace MagicVilla_VillaAPI.Controllers
 		{
 			_userRepository = userRepository;
 			this._response = new();
-		}
+            this._response.ErrorMessages = new List<string>();
+
+        }
 
 		[HttpPost("login")]
 		public async Task<IActionResult> Login([FromBody] LoginRequestDTO model)
@@ -42,7 +44,7 @@ namespace MagicVilla_VillaAPI.Controllers
 			{
 				_response.StatusCode = HttpStatusCode.BadRequest;
 				_response.IsSuccess = false;
-				_response.ErrorMessages.Add("Usernaem Already Exist");
+				_response.ErrorMessages.Add("Username Already Exist");
 				return BadRequest(_response);
 			}
 

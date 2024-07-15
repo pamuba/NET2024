@@ -14,23 +14,26 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var serviceHost1 = new ServiceHost(typeof(MathService));
+            using (var serviceHost1 = new ServiceHost(typeof(MathService)))
             {
-                ServiceEndpoint BasicHttpEndPoint1 = serviceHost1.AddServiceEndpoint(
-                    typeof(IMathService),
-                    new BasicHttpBinding(),
-                    "http://localhost:4444/MathService"
-                );
+
                 serviceHost1.Open();
+
+                foreach (ServiceEndpoint ep in serviceHost1.Description.Endpoints)
+                {
+                    Console.WriteLine(ep.Address.ToString() + " " + ep.Binding.Name);
+                }
             }
-            var serviceHost2 = new ServiceHost(typeof(CalcService));
+            using (var serviceHost2 = new ServiceHost(typeof(CalcService)))
             {
-                ServiceEndpoint BasicHttpEndPoint2 = serviceHost2.AddServiceEndpoint(
-                    typeof(ICalcService),
-                    new BasicHttpBinding(),
-                    "http://localhost:5555/CalcService"
-                );
+
                 serviceHost2.Open();
+
+
+                foreach (ServiceEndpoint ep in serviceHost2.Description.Endpoints)
+                {
+                    Console.WriteLine(ep.Address.ToString() + " " + ep.Binding.Name);
+                }
             }
 
             Console.ReadKey();
